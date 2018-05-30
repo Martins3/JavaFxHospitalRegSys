@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hibernate.data.eRegistrationInstanceEntity" table="Registration_Instance" schema="Hospital">
+        <id name="num">
+            <column name="num" sql-type="char(6)" length="6"/>
+        </id>
+        <property name="patientAmount">
+            <column name="Patient_amount" sql-type="int(11)"/>
+        </property>
+        <property name="isCancelled">
+            <column name="is_cancelled" sql-type="tinyint(1)"/>
+        </property>
+        <property name="actualCost">
+            <column name="actual_cost" sql-type="decimal(8,2)" precision="8" scale="2"/>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="datetime"/>
+        </property>
+    </class>
+</hibernate-mapping>

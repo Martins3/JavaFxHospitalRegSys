@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/Hospital</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <property name="connection.username">root</property>
+        <property name="connection.password">123456</property>
+        <mapping class="com.hibernate.data.eDepartmentEntity"/>
+        <mapping resource="com/hibernate/data/eDepartmentEntity.hbm.xml"/>
+        <mapping resource="com/hibernate/data/eDoctorEntity.hbm.xml"/>
+        <mapping class="com.hibernate.data.eDoctorEntity"/>
+        <mapping resource="com/hibernate/data/ePatientEntity.hbm.xml"/>
+        <mapping class="com.hibernate.data.ePatientEntity"/>
+        <mapping class="com.hibernate.data.eRegistrationInstanceEntity"/>
+        <mapping resource="com/hibernate/data/eRegistrationInstanceEntity.hbm.xml"/>
+        <mapping resource="com/hibernate/data/eRegistrationTypeEntity.hbm.xml"/>
+        <mapping class="com.hibernate.data.eRegistrationTypeEntity"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

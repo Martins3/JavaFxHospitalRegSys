@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hibernate.data.eRegistrationTypeEntity" table="Registration_Type" schema="Hospital">
+        <id name="num">
+            <column name="num" sql-type="char(6)" length="6"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="char(12)" length="12"/>
+        </property>
+        <property name="abbr">
+            <column name="abbr" sql-type="char(4)" length="4"/>
+        </property>
+        <property name="isExpert">
+            <column name="is_expert" sql-type="tinyint(1)"/>
+        </property>
+        <property name="numLimitaion">
+            <column name="num_limitaion" sql-type="int(11)"/>
+        </property>
+        <property name="money">
+            <column name="money" sql-type="tinyint(1)"/>
+        </property>
+    </class>
+</hibernate-mapping>

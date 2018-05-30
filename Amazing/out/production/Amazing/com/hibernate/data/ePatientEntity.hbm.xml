@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hibernate.data.ePatientEntity" table="Patient" schema="Hospital">
+        <id name="num">
+            <column name="num" sql-type="char(6)" length="6"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="char(10)" length="10"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="char(8)" length="8"/>
+        </property>
+        <property name="money">
+            <column name="money" sql-type="decimal(10,2)" precision="10" scale="2"/>
+        </property>
+        <property name="signUpTime">
+            <column name="sign_up_time" sql-type="datetime" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
