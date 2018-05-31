@@ -3,17 +3,49 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="DoctorController"
           prefHeight="400.0" prefWidth="600.0">
 
     <TabPane id="tabPane" prefHeight="400.0" prefWidth="600.0">
-        <Tab text="Tab 1" closable="false">
-            <fx:include fx:id="tab1Page" source="RedBlueDrug.fxml"/>
+        <Tab text="病人列表" closable="false">
+        <TableView fx:id="patientsTable" GridPane.columnIndex="0" GridPane.rowIndex="1">
+             <columns>
+                  <TableColumn text="挂号编号">
+                  </TableColumn>
+                  <TableColumn text="病人编号">
+                  </TableColumn>
+                  <TableColumn text="挂号日期时间">
+                  </TableColumn>
+                  <TableColumn text="号种类别">
+                  </TableColumn>
+             </columns>
+        </TableView>
         </Tab>
-        <Tab text="Tab 2" closable="false">
-            <fx:include fx:id="tab2Page" source="Patient-vice.fxml"/>
+
+
+
+
+        <Tab text="收入列表" closable="false">
+            <TableView fx:id="incomeTable" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <columns>
+                    <TableColumn text="科室名称">
+                    </TableColumn>
+                    <TableColumn text="医生编号">
+                    </TableColumn>
+                    <TableColumn text="医生名称">
+                    </TableColumn>
+                    <TableColumn text="号种类别">
+                    </TableColumn>
+                    <TableColumn text="挂号人次">
+                    </TableColumn>
+                    <TableColumn text="收入合计">
+                    </TableColumn>
+                </columns>
+            </TableView>
         </Tab>
     </TabPane>
 

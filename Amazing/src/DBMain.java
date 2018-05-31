@@ -21,4 +21,8 @@ public class DBMain {
     public static Session getSession() throws HibernateException {
         return ourSessionFactory.openSession();
     }
+
+    public static void closeDBConnection(){
+        ourSessionFactory.close();
+    }
 }

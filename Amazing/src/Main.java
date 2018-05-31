@@ -10,6 +10,8 @@ import java.io.IOException;
 
 public class Main extends Application {
     private Stage primaryStage;
+    private DoctorController doctorController;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         this.primaryStage = primaryStage;
@@ -24,6 +26,13 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(pane));
 
         primaryStage.show();
+    }
+
+
+    @Override
+    public void stop(){
+        if(doctorController != null) doctorController.stopTimeLine();
+        DBMain.closeDBConnection();
     }
 
     void setPatient(){
@@ -44,6 +53,7 @@ public class Main extends Application {
     void setDoctor(){
         FXMLLoader doctorScene = new FXMLLoader(getClass().getResource("layout/Doctor.fxml"));
         try {
+            doctorController = doctorScene.getController();
             Pane p = doctorScene.load();
             primaryStage.setTitle("医生界面");
             primaryStage.setScene(new Scene(p));

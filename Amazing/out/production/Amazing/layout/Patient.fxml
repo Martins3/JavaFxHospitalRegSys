@@ -13,7 +13,7 @@
            prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
 >
    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-      <Label layoutX="237.0" layoutY="16.0" prefHeight="28.0" prefWidth="124.0" text="门 诊 挂 号" textFill="#5c0a41">
+      <Label fx:id="log" layoutX="237.0" layoutY="16.0" prefHeight="28.0" prefWidth="124.0" text="门 诊 挂 号" textFill="#5c0a41">
          <font>
             <Font name="Arial" size="24.0"/>
          </font>
@@ -25,15 +25,14 @@
             <Font name="Arial Bold" size="15.0"/>
          </font>
       </Label>
-      <!--<TextField layoutX="128.0" layoutY="78.0"/>-->
-       <ComboBox layoutX="128.0" layoutY="78.0" fx:id="regType"/>
+       <ComboBox layoutX="128.0" layoutY="78.0" fx:id="isExpert"/>
 
       <Label layoutX="321.0" layoutY="81.0" text="号种名称">
          <font>
             <Font name="Arial Bold" size="15.0"/>
          </font>
       </Label>
-      <ComboBox layoutX="385.0" layoutY="77.0" editable="true" fx:id="regName"/>
+      <ComboBox layoutX="385.0" layoutY="77.0" editable="true" fx:id="regType"/>
 
       <Label layoutX="322.0" layoutY="128.0" text="应缴金额">
          <font>
@@ -49,7 +48,7 @@
       </Label>
       <TextField promptText="交款金额" layoutX="129.0" layoutY="124.0" fx:id="payment"/>
 
-      <TextField promptText="找钱" layoutX="129.0"  layoutY="165.0" fx:id="exchangeCount"/>
+      <Label layoutX="129.0"  layoutY="165.0" fx:id="exchangeCount"/>
       <Label layoutX="64.0" layoutY="169.0" text="找零金额">
          <font>
             <Font name="Arial Bold" size="15.0"/>
@@ -82,7 +81,7 @@
             <Font name="System Bold" size="15.0"/>
          </font>
       </Button>
-      <Button layoutX="272.0" layoutY="249.0" mnemonicParsing="false" text="清除" onMouseClicked="#clear">
+      <Button layoutX="272.0" layoutY="249.0" mnemonicParsing="false" text="提交" onMouseClicked="#submit">
          <font>
             <Font name="System Bold" size="15.0"/>
          </font>

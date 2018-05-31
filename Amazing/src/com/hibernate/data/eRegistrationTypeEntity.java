@@ -12,6 +12,8 @@ public class eRegistrationTypeEntity {
     private byte isExpert;
     private int numLimitaion;
     private byte money;
+    private String departmentNum;
+
 
     @Id
     @Column(name = "num", nullable = false, length = 6)
@@ -90,5 +92,17 @@ public class eRegistrationTypeEntity {
     public int hashCode() {
 
         return Objects.hash(num, name, abbr, isExpert, numLimitaion, money);
+    }
+
+    @Basic
+    @Column(name = "Department_num", nullable = false)
+    public String getDepartmentNum() {
+        return departmentNum;
+    }
+
+    @Basic
+    @Column(name = "Department_num", nullable = false)
+    public void setDepartmentNum(String departmentNum) {
+        this.departmentNum = departmentNum;
     }
 }

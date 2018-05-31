@@ -23,5 +23,8 @@
         <property name="money">
             <column name="money" sql-type="tinyint(1)"/>
         </property>
+        <property name="departmentNum">
+            <column name="Department_num" sql-type="char(6)" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

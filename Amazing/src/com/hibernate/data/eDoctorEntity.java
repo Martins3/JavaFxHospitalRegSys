@@ -11,6 +11,7 @@ public class eDoctorEntity {
     private String name;
     private String abbr;
     private String password;
+    private String departmentNum;
     private byte isExpert;
     private Timestamp signUpTime;
 
@@ -91,5 +92,18 @@ public class eDoctorEntity {
     public int hashCode() {
 
         return Objects.hash(num, name, abbr, password, isExpert, signUpTime);
+    }
+
+
+    @Basic
+    @Column(name = "Department_num", nullable = false)
+    public String getDepartmentNum() {
+        return departmentNum;
+    }
+
+    @Basic
+    @Column(name = "Department_num", nullable = false)
+    public void setDepartmentNum(String departmentNum) {
+        this.departmentNum = departmentNum;
     }
 }

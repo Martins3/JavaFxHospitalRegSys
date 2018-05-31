@@ -23,5 +23,9 @@
         <property name="signUpTime">
             <column name="sign_up_time" sql-type="datetime" not-null="true"/>
         </property>
+
+        <property name="departmentNum">
+            <column name="Department_num" sql-type="char(6)" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>
