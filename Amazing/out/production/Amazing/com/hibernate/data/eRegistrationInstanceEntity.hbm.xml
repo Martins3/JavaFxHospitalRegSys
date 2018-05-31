@@ -8,6 +8,19 @@
         <id name="num">
             <column name="num" sql-type="char(6)" length="6"/>
         </id>
+
+        <property name="regNum">
+            <column name="Regestration_num" sql-type="char(6)" length="6"/>
+        </property>
+
+        <property name="DoctorNum">
+            <column name="Doctor_num" sql-type="char(6)" length="6"/>
+        </property>
+
+        <property name="PatientNum">
+            <column name="Patient_num" sql-type="char(6)" length="6"/>
+        </property>
+
         <property name="patientAmount">
             <column name="Patient_amount" sql-type="int(11)"/>
         </property>

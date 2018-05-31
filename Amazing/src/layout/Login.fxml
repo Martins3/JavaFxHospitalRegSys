@@ -33,13 +33,13 @@
           <Font size="18.0"/>
         </font>
     </Label>
-    <PasswordField fx:id="passWord" prefHeight="27.0" prefWidth="179.0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-    <TextField fx:id="userName" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <PasswordField fx:id="passWord"  prefHeight="27.0" prefWidth="179.0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <TextField fx:id="userName"  GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
     <RadioButton fx:id="rbPatient" mnemonicParsing="false"  text="病人" GridPane.columnIndex="1"
-                 GridPane.halignment="RIGHT" GridPane.rowIndex="3"/>
+                 GridPane.halignment="RIGHT" GridPane.rowIndex="3" onMouseClicked="#choosePatient"/>
     <RadioButton fx:id="rbDoctor" mnemonicParsing="false"  prefHeight="18.0" prefWidth="65.0" text="医生"
-                 GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                 GridPane.columnIndex="1" GridPane.rowIndex="3" onMouseClicked="#chooseDoctor"/>
 
     <Button mnemonicParsing="false" onMouseClicked="#tryLogin" text="登录" GridPane.columnIndex="1"
             GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP"/>

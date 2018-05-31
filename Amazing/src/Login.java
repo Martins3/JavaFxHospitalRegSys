@@ -1,4 +1,5 @@
 
+import com.hibernate.data.eDoctorEntity;
 import com.hibernate.data.ePatientEntity;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -14,14 +15,18 @@ public class Login {
     public RadioButton rbPatient;
     public RadioButton rbDoctor;
     private Main main;
-    private ToggleGroup toggleGroup;
+    private  boolean isPatient;
 
 
     @FXML
     public void initialize() {
-        toggleGroup = new ToggleGroup();
+        ToggleGroup toggleGroup = new ToggleGroup();
         rbPatient.setToggleGroup(toggleGroup);
         rbDoctor.setToggleGroup(toggleGroup);
+        rbPatient.fire();
+        userName.setText("000001");
+        passWord.setText("1");
+        isPatient = true;
     }
 
     public void setMain(Main main) {
@@ -29,58 +34,81 @@ public class Login {
     }
 
     public void tryLogin(MouseEvent mouseEvent) {
-        if(rbPatient.isSelected()){
-            if(true || loginQuery(userName.getText(), passWord.getText()))
-                main.setPatient();
-        }else if(rbDoctor.isSelected()){
-            if(true || loginQuery(userName.getText(), passWord.getText()))
+        if(loginQuery(userName.getText(), passWord.getText())){
+            main.setUserID(userName.getText());
+            if(isPatient)
+                main.setPatient(userName.getText());
+            else
                 main.setDoctor();
         }else{
-            System.out.println("Nobody is chosen !");
+            System.out.println("没有该病人或者账号密码错误");
         }
     }
 
-//    public void trySignUp(MouseEvent mouseEvent) {
-//        if(signUpUpdate(username.getText(), password.getText()))
-//        main.setPatient();
-//    }
+/*
+    public void trySignUp(MouseEvent mouseEvent) {
+        if(signUpUpdate(username.getText(), password.getText()))
+            main.setPatient();
+    }
+*/
 
     private boolean loginQuery(String id, String password){
         Session session = DBMain.getSession();
-        String hql = "FROM ePatientEntity where id = :id";
-        Query query = session.createQuery(hql);
-        query.setParameter("id", id);
-        List<ePatientEntity> results = query.list();
+        String hql;
+        if(isPatient){
+            hql = "FROM  ePatientEntity where id = :id";
+            Query query = session.createQuery(hql);
+            query.setParameter("id", id);
+            List<ePatientEntity> results = query.list();
+            System.out.println("patient id is " + id);
 
-        if(results.size() == 0) return false;
-        String patPass= results.get(0).getPassword();
-        if(patPass == null){
-            System.out.println("数据库中间没有该人");
-            return false;
-        }else{
-            if(!patPass.equals(password)){
-                System.out.println("账号密码错误");
+            if(results.size() == 0) return false;
+            String patPass= results.get(0).getPassword();
+            if(patPass == null || !patPass.equals(password)){
                 return false;
             }
+            return true;
+        }else{
+            hql = "FROM  eDoctorEntity where id = :id";
+            Query query = session.createQuery(hql);
+            query.setParameter("id", id);
+            List<eDoctorEntity> results = query.list();
+            if(results.size() == 0) return false;
+            String patPass= results.get(0).getPassword();
+            if(patPass == null || !patPass.equals(password)){
+                return false;
+            }
+            return true;
         }
-        return true;
     }
 
-//    private boolean signUpUpdate(String id, String password){
-//        Session session = DBMain.getSession();
-//        session.beginTransaction();
-//        ePatientEntity e = new ePatientEntity();
-//        e.setNum(id);
-//        e.setName("666");
-//        e.setPassword(password);
-//        e.setMoney(new BigDecimal(0));
-//        e.setSignUpTime(Timestamp.valueOf(LocalDateTime.now()));
-//        session.save(e);
-//        session.getTransaction().commit();
-//        return true;
-//    }
+/*
+    private boolean signUpUpdate(String id, String password){
+        Session session = DBMain.getSession();
+        session.beginTransaction();
+        ePatientEntity e = new ePatientEntity();
+        e.setNum(id);
+        e.setName("666");
+        e.setPassword(password);
+        e.setMoney(new BigDecimal(0));
+        e.setSignUpTime(Timestamp.valueOf(LocalDateTime.now()));
+        session.save(e);
+        session.getTransaction().commit();
+        return true;
+    }
+*/
 
     public void cancel(MouseEvent mouseEvent) {
         main.stop();
+    }
+
+    public void choosePatient(MouseEvent mouseEvent) {
+        isPatient = true;
+        System.out.println("patient selected !");
+    }
+
+    public void chooseDoctor(MouseEvent mouseEvent) {
+        isPatient = false;
+        System.out.println("doctor selected !");
     }
 }

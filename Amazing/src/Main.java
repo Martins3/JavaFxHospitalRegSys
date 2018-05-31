@@ -12,6 +12,9 @@ public class Main extends Application {
     private Stage primaryStage;
     private DoctorController doctorController;
 
+    private String userID;
+
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         this.primaryStage = primaryStage;
@@ -33,14 +36,18 @@ public class Main extends Application {
     public void stop(){
         if(doctorController != null) doctorController.stopTimeLine();
         DBMain.closeDBConnection();
+        if(primaryStage != null) primaryStage.close();
     }
 
-    void setPatient(){
+    void setPatient(String id){
         FXMLLoader patientScene = new FXMLLoader(getClass().getResource("layout/Patient.fxml"));
         try {
             Parent p = patientScene.load();
             PatientController patientController = patientScene.getController();
+            patientController.setUser(id);
+            patientController.rendering();
             patientController.setMain(this);
+
             primaryStage.setTitle("挂号");
             primaryStage.setScene(new Scene(p, 600, 400));
         } catch (IOException e) {
@@ -65,6 +72,14 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 }
 

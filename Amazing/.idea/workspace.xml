@@ -2,33 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bee59955-1b05-4238-b766-a00c239a9406" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/L.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Amazing/DBMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/DBMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Amazing/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/DoctorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Amazing/DoctorLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Amazing/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/Login.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Amazing/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Amazing/PatientController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/PatientController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Amazing/PatientController$Confirm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/PatientController$Confirm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Amazing/PatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/PatientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Amazing/PatientLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Amazing/RedBlueDrugController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eDoctorEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eDoctorEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eDoctorEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eDoctorEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eRegistrationTypeEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eRegistrationTypeEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eRegistrationTypeEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eRegistrationTypeEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eRegistrationInstanceEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eRegistrationInstanceEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eRegistrationInstanceEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/com/hibernate/data/eRegistrationInstanceEntity.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Amazing/layout/Doctor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/layout/Doctor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Amazing/layout/DoctorLogin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Amazing/layout/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/layout/Login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Amazing/layout/Patient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Amazing/layout/Patient.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Amazing/layout/PatientLogin.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Amazing/layout/RedBlueDrug.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DBMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoctorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/data/eDoctorEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hibernate/data/eDoctorEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/data/eDoctorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hibernate/data/eDoctorEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationTypeEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationTypeEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationTypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationTypeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationInstanceEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationInstanceEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationInstanceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationInstanceEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/Doctor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Doctor.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/Patient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Patient.fxml" afterDir="false" />
@@ -80,6 +73,13 @@
         <item name="Hospital@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="Hospital: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="Patient: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Hospital@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Hospital: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="Registration_Type: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -93,22 +93,23 @@
       <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="95">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2523#2524#0" expanded="true" />
-                <element signature="e#2550#2551#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoctorController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DoctorController.java">
+      <file leaf-file-name="DBMain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DBMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="32" selection-start-column="32" selection-end-column="32" />
+            <state relative-caret-position="217">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,13 +117,23 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+            <state relative-caret-position="-755">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1883#1884#0" expanded="true" />
-                <element signature="e#1911#1912#0" expanded="true" />
+                <element signature="e#2079#2080#0" expanded="true" />
+                <element signature="e#2108#2109#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/layout/Login.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -130,25 +141,61 @@
       <file leaf-file-name="PatientController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PatientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="164" column="12" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="12" />
+            <state relative-caret-position="112">
+              <caret line="272" column="29" selection-start-line="272" selection-start-column="29" selection-end-line="272" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2916#2917#0" expanded="true" />
-                <element signature="e#2948#2949#0" expanded="true" />
-                <element signature="method#ok#0;class#PatientController#0" />
-                <element signature="e#5215#5216#0" expanded="true" />
-                <element signature="e#5258#5259#0" expanded="true" />
+                <element signature="e#1390#1391#0" expanded="true" />
+                <element signature="e#1422#1423#0" expanded="true" />
+                <element signature="method#initSelectListener#0;class#PatientController#0" />
+                <element signature="method#initDynamicShow#0;class#PatientController#0" />
+                <element signature="method#getDeposit#0;class#PatientController#0" />
+                <element signature="method#setDeposit#0;class#PatientController#0" />
+                <element signature="method#getPatient#0;class#PatientController#0" />
+                <element signature="method#updateRes#0;class#PatientController#0" />
+                <element signature="method#checkValid#0;class#PatientController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eDepartmentEntity.hbm.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/eDepartmentEntity.hbm.xml">
+      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="459">
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eRegistrationInstanceEntity.hbm.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/eRegistrationInstanceEntity.hbm.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eRegistrationInstanceEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/eRegistrationInstanceEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+              <folding>
+                <element signature="e#347#348#0" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+                <element signature="e#456#457#0" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#524#525#0" expanded="true" />
+                <element signature="e#574#575#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#681#682#0" expanded="true" />
+                <element signature="e#733#734#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,8 +203,8 @@
       <file leaf-file-name="eDoctorEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/eDoctorEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="149">
+              <caret line="98" column="44" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
               <folding>
                 <element signature="e#2420#2421#0" expanded="true" />
                 <element signature="e#2456#2457#0" expanded="true" />
@@ -168,11 +215,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eDepartmentEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/eDepartmentEntity.java">
+      <file leaf-file-name="ePatientEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/ePatientEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+            <state relative-caret-position="272">
+              <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+              <folding>
+                <element signature="e#733#734#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#1173#1174#0" expanded="true" />
+                <element signature="e#1207#1208#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -204,19 +257,22 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/001c3f00-d082-4ec8-9652-3fd980e75297/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/001c3f00-d082-4ec8-9652-3fd980e75297/console_1.sql" />
         <option value="$PROJECT_DIR$/src/PatientLogin.java" />
-        <option value="$PROJECT_DIR$/src/layout/Login.fxml" />
         <option value="$PROJECT_DIR$/src/DBMain.java" />
-        <option value="$PROJECT_DIR$/src/Login.java" />
-        <option value="$PROJECT_DIR$/src/layout/Doctor.fxml" />
-        <option value="$PROJECT_DIR$/src/DoctorController.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/hibernate/data/eDoctorEntity.java" />
         <option value="$PROJECT_DIR$/src/com/hibernate/data/eDoctorEntity.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/layout/Patient.fxml" />
         <option value="$PROJECT_DIR$/src/com/hibernate/data/eDepartmentEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/com/hibernate/data/eDepartmentEntity.java" />
         <option value="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationTypeEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationTypeEntity.java" />
+        <option value="$PROJECT_DIR$/src/layout/Login.fxml" />
+        <option value="$PROJECT_DIR$/src/Login.java" />
+        <option value="$PROJECT_DIR$/src/L.java" />
+        <option value="$PROJECT_DIR$/src/layout/Doctor.fxml" />
+        <option value="$PROJECT_DIR$/src/DoctorController.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/layout/Patient.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hibernate/data/eDoctorEntity.java" />
+        <option value="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationInstanceEntity.java" />
+        <option value="$PROJECT_DIR$/src/com/hibernate/data/eRegistrationInstanceEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/PatientController.java" />
       </list>
     </option>
@@ -318,6 +374,11 @@
       <module name="Amazing" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
+    <configuration name="L" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="L" />
+      <module name="Amazing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Amazing" />
@@ -367,10 +428,12 @@
     <list>
       <item itemvalue="Application.DBMain" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.L" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.L" />
         <item itemvalue="Application.DBMain" />
       </list>
     </recent_temporary>
@@ -389,12 +452,12 @@
       <workItem from="1527608098430" duration="1343000" />
       <workItem from="1527609498765" duration="292000" />
       <workItem from="1527610426869" duration="26727000" />
-      <workItem from="1527689750002" duration="23451000" />
+      <workItem from="1527689750002" duration="38537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53696000" />
+    <option name="totallyTimeSpent" value="68782000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -411,28 +474,28 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50151515" side_tool="true" weight="0.47019866" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022727" side_tool="true" weight="0.48013246" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32954547" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info id="Capture Tool" order="8" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="right" id="Database" order="5" weight="0.19848485" />
+      <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.19848485" />
       <window_info id="Structure" order="1" sideWeight="0.5066225" side_tool="true" weight="0.15681818" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="5" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39900663" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32781458" />
       <window_info id="DB Browser" order="4" sideWeight="0.49752066" weight="0.32954547" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.3289256" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.32781458" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3289256" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49848485" weight="0.40728477" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49772727" weight="0.44536424" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3289256" />
       <window_info id="Persistence" order="2" sideWeight="0.5080214" side_tool="true" weight="0.20227273" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49197862" visible="true" weight="0.20227273" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49197862" visible="true" weight="0.24090908" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3289256" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="6" sideWeight="0.5066225" side_tool="true" weight="0.15681818" />
@@ -444,42 +507,6 @@
       <window_info anchor="bottom" id="Hibernate Console" order="0" weight="0.446281" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Persistence" order="2" sideWeight="0.509375" side_tool="true" weight="0.2030303" />
-      <window_info anchor="bottom" id="DB Execution Console" order="8" />
-      <window_info id="Designer" order="3" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="14" visible="true" weight="0.3289256" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924242" weight="0.47107437" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="DB Browser" order="4" sideWeight="0.49752066" weight="0.32954547" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5008264" side_tool="true" weight="0.25378788" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3289256" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Hibernate Console" order="0" weight="0.446281" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007576" side_tool="true" weight="0.47107437" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.3289256" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.490625" weight="0.2030303" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32954547" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.22045454" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.3289256" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Structure" order="1" sideWeight="0.509375" side_tool="true" weight="0.2030303" />
-      <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -489,7 +516,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -503,8 +530,6 @@
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2523#2524#0" expanded="true" />
-            <element signature="e#2550#2551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -515,8 +540,8 @@
           <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1883#1884#0" expanded="true" />
-            <element signature="e#1911#1912#0" expanded="true" />
+            <element signature="e#2079#2080#0" expanded="true" />
+            <element signature="e#2108#2109#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -527,11 +552,15 @@
           <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2916#2917#0" expanded="true" />
-            <element signature="e#2948#2949#0" expanded="true" />
-            <element signature="method#ok#0;class#PatientController#0" />
-            <element signature="e#5215#5216#0" expanded="true" />
-            <element signature="e#5258#5259#0" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="method#initSelectListener#0;class#PatientController#0" />
+            <element signature="method#initDynamicShow#0;class#PatientController#0" />
+            <element signature="method#getDeposit#0;class#PatientController#0" />
+            <element signature="method#setDeposit#0;class#PatientController#0" />
+            <element signature="method#getPatient#0;class#PatientController#0" />
+            <element signature="method#updateRes#0;class#PatientController#0" />
+            <element signature="method#checkValid#0;class#PatientController#0" />
           </folding>
         </state>
       </provider>
@@ -540,6 +569,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1135#1136#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1386#1387#0" expanded="true" />
+            <element signature="e#3108#3109#0" expanded="true" />
+            <element signature="e#3165#3166#0" expanded="true" />
+            <element signature="e#1325#1326#0" expanded="true" />
+            <element signature="e#1356#1357#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -612,33 +654,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/ePatientEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding>
-            <element signature="e#733#734#0" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RedBlueDrugController.java" />
     <entry file="file://$PROJECT_DIR$/src/DoctorLogin.java" />
-    <entry file="das://001c3f00-d082-4ec8-9652-3fd980e75297/schema/Hospital/table/Patient">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/001c3f00-d082-4ec8-9652-3fd980e75297/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -657,18 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="987" column="25" selection-start-line="987" selection-start-column="25" selection-end-line="987" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,65 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="139" column="28" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2523#2524#0" expanded="true" />
-            <element signature="e#2550#2551#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DoctorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1883#1884#0" expanded="true" />
-            <element signature="e#1911#1912#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layout/Patient.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/eDepartmentEntity.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/eDoctorEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-          <folding>
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2456#2457#0" expanded="true" />
-            <element signature="e#2580#2581#0" expanded="true" />
-            <element signature="e#2630#2631#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -800,17 +746,179 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PatientController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/eDepartmentEntity.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="164" column="12" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="12" />
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/L.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DoctorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2916#2917#0" expanded="true" />
-            <element signature="e#2948#2949#0" expanded="true" />
-            <element signature="method#ok#0;class#PatientController#0" />
-            <element signature="e#5215#5216#0" expanded="true" />
-            <element signature="e#5258#5259#0" expanded="true" />
+            <element signature="e#1135#1136#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1386#1387#0" expanded="true" />
+            <element signature="e#3108#3109#0" expanded="true" />
+            <element signature="e#3165#3166#0" expanded="true" />
+            <element signature="e#1325#1326#0" expanded="true" />
+            <element signature="e#1356#1357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://001c3f00-d082-4ec8-9652-3fd980e75297/schema/Hospital/table/Patient">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/ePatientEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+          <folding>
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#1173#1174#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layout/Patient.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="84" column="14" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layout/Doctor.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-755">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2079#2080#0" expanded="true" />
+            <element signature="e#2108#2109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layout/Login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/eDoctorEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="98" column="44" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
+          <folding>
+            <element signature="e#2420#2421#0" expanded="true" />
+            <element signature="e#2456#2457#0" expanded="true" />
+            <element signature="e#2580#2581#0" expanded="true" />
+            <element signature="e#2630#2631#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/eRegistrationInstanceEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hibernate/data/eRegistrationInstanceEntity.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="272" column="29" selection-start-line="272" selection-start-column="29" selection-end-line="272" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="method#initSelectListener#0;class#PatientController#0" />
+            <element signature="method#initDynamicShow#0;class#PatientController#0" />
+            <element signature="method#getDeposit#0;class#PatientController#0" />
+            <element signature="method#setDeposit#0;class#PatientController#0" />
+            <element signature="method#getPatient#0;class#PatientController#0" />
+            <element signature="method#updateRes#0;class#PatientController#0" />
+            <element signature="method#checkValid#0;class#PatientController#0" />
           </folding>
         </state>
       </provider>

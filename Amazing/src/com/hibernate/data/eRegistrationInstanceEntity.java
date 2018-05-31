@@ -9,6 +9,40 @@ import java.util.Objects;
 @Table(name = "Registration_Instance", schema = "Hospital", catalog = "")
 public class eRegistrationInstanceEntity {
     private String num;
+    private String regNum;
+
+    @Basic
+    @Column(name = "Regestration_num", nullable = false)
+    public String getRegNum() {
+        return regNum;
+    }
+
+    public void setRegNum(String regNum) {
+        this.regNum = regNum;
+    }
+
+    @Basic
+    @Column(name = "Doctor_num", nullable = false)
+    public String getDoctorNum() {
+        return DoctorNum;
+    }
+
+    public void setDoctorNum(String doctorNum) {
+        DoctorNum = doctorNum;
+    }
+
+    @Basic
+    @Column(name = "Patient_num", nullable = false)
+    public String getPatientNum() {
+        return PatientNum;
+    }
+
+    public void setPatientNum(String patientNum) {
+        PatientNum = patientNum;
+    }
+
+    private String DoctorNum;
+    private String PatientNum;
     private int patientAmount;
     private byte isCancelled;
     private BigDecimal actualCost;

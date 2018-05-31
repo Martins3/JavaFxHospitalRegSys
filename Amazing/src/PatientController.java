@@ -1,18 +1,18 @@
 
-import com.hibernate.data.eDepartmentEntity;
-import com.hibernate.data.eDoctorEntity;
-import com.hibernate.data.eRegistrationTypeEntity;
-import javafx.event.EventHandler;
+import com.hibernate.data.*;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
+import java.math.BigDecimal;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,15 +33,28 @@ public class PatientController {
     public ComboBox<String> departmentName;
     public Label log;
     public Label fee;
-    private Main main;
+
 
     // when ok pressed, the value stored here
     private String doctorID;
     private String regTypeID;
     private String departmentID; // for shorten!
     private boolean isExpertID; // for shorten and uniform
-    private volatile boolean updateByUser; // if updateCombo, the value is set as true first !
 
+    private String user;
+    private Main main;
+
+    void setUser(String id) {
+        this.user = id;
+    }
+
+    void setMain(Main main) {
+        this.main = main;
+    }
+
+    void rendering(){
+        Platform.runLater(() -> exchangeCount.setText("" + getDeposit()));
+    }
 
     enum Confirm{
         /**
@@ -55,7 +68,6 @@ public class PatientController {
     @FXML
     public void initialize(){
         isExpertID = false;
-
         updateThreeCombo();
         initSelectListener();
         initDynamicShow();
@@ -63,37 +75,6 @@ public class PatientController {
         updateRes();
     }
 
-    public void setMain(Main main) {
-        this.main = main;
-    }
-
-    /**
-     * useless function !
-     * @param mouseEvent not useful
-     */
-    public void ok(MouseEvent mouseEvent) {
-/*
-switch (confirm){
-case NOBODY:
-log.setText("没有什么好确认的");
-break;
-case DOCTOR:
-if(!checkValid(doctorName.getEditor().getText()))
-doctorID = null;
-break;
-case REG_TYPE:
-if(!checkValid(regType.getEditor().getText()))
-regTypeID = null;
-break;
-case DEPARTMENT:
-if(!checkValid(departmentName.getEditor().getText()))
-departmentID = null;
-updateTwoCombo();
-break;
-}
-updateRes();
-*/
-    }
 
     private void initExpertCombo(){
         isExpert.getItems().addAll( "未选择", "普通", "专家");
@@ -161,6 +142,49 @@ updateRes();
             regTypeID = null;
         });
 
+        payment.setOnKeyPressed(ke -> {
+            if(ke.getCode().equals(KeyCode.ENTER)){
+                System.out.println("press enter !");
+                try {
+                    int pay = Integer.parseInt(payment.getText());
+                    int deposit = getDeposit();
+                    System.out.println("deposit is " + deposit);
+                    int cost = Integer.valueOf(fee.getText());
+                    if(pay + deposit < cost){
+                        payment.clear();
+                        System.out.println("pay is not enough " + pay  + " " + deposit);
+                    }else{
+                        deposit = pay + deposit  - cost;
+                        exchangeCount.setText("" + deposit);
+                        System.out.println("after " + getDeposit());
+                    }
+                }catch (NumberFormatException n){
+                    payment.clear();
+                }
+            }
+        });
+    }
+
+    private int getDeposit(){
+        BigDecimal d = getPatient().getMoney();
+        return d.intValue();
+    }
+
+    private void setDeposit(int d){
+        Session session = DBMain.getSession();
+        session.beginTransaction();
+        ePatientEntity e = getPatient();
+        e.setMoney(new BigDecimal(d));
+        session.getTransaction().commit();
+    }
+
+    private ePatientEntity getPatient(){
+        Session session = DBMain.getSession();
+        String hql = "from  ePatientEntity where num = :userID";
+        Query query = session.createQuery(hql);
+        query.setParameter("userID", user);
+        List<ePatientEntity> l = query.list();
+        return l.get(0);
     }
 
     /**
@@ -173,7 +197,6 @@ updateRes();
             fee.setText(info);
             payment.clear();
             payment.setVisible(false);
-            exchangeCount.setVisible(false);
             return;
         }
 
@@ -182,12 +205,13 @@ updateRes();
         Query query = session.createQuery(hql);
         query.setParameter("regTypeID", regTypeID);
         List<eRegistrationTypeEntity> l = query.list();
-        fee.setText(l.get(0).getMoney() + "");
-        payment.setVisible(true);
+        int cost = l.get(0).getMoney();
+        fee.setText(cost + "");
+        int deposit = getDeposit();
+        if(cost > deposit){
+            payment.setVisible(true);
+        }
     }
-
-
-
 
 
     /**
@@ -237,11 +261,28 @@ updateRes();
 
 
     public void submit(MouseEvent mouseEvent) {
-        exchangeCount.setVisible(false);
-        regNum.setText("1");
+        // save changes
+        setDeposit(Integer.valueOf(exchangeCount.getText()));
+
+        // create a reg
+        Session session = DBMain.getSession();
+        session.beginTransaction();
+        eRegistrationInstanceEntity e = new eRegistrationInstanceEntity();
+        e.setNum("000001"); // how to make the data sync
+        e.setRegNum("000003"); // add a variable
+        e.setDoctorNum("000004"); // add a variable
+        e.setPatientNum(user);
+        e.setPatientAmount(12); // 如何确定人数
+
+        e.setIsCancelled((byte)0);
+        e.setActualCost(new BigDecimal(123));
+        e.setTime(Timestamp.valueOf(LocalDateTime.now()));
+        session.save(e);
+        session.getTransaction().commit();
     }
 
     public void exit(MouseEvent mouseEvent) {
+        main.stop();
     }
 
 
