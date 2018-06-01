@@ -29,7 +29,7 @@ public class Login {
         isPatient = true;
     }
 
-    public void setMain(Main main) {
+    void setMain(Main main) {
         this.main = main;
     }
 
@@ -39,7 +39,7 @@ public class Login {
             if(isPatient)
                 main.setPatient(userName.getText());
             else
-                main.setDoctor();
+                main.setDoctor(userName.getText());
         }else{
             System.out.println("没有该病人或者账号密码错误");
         }
@@ -82,21 +82,6 @@ public class Login {
         }
     }
 
-/*
-    private boolean signUpUpdate(String id, String password){
-        Session session = DBMain.getSession();
-        session.beginTransaction();
-        ePatientEntity e = new ePatientEntity();
-        e.setNum(id);
-        e.setName("666");
-        e.setPassword(password);
-        e.setMoney(new BigDecimal(0));
-        e.setSignUpTime(Timestamp.valueOf(LocalDateTime.now()));
-        session.save(e);
-        session.getTransaction().commit();
-        return true;
-    }
-*/
 
     public void cancel(MouseEvent mouseEvent) {
         main.stop();

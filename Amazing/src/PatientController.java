@@ -182,7 +182,7 @@ public class PatientController {
     }
 
     /**
-     * once the doctor and regType has been chosen
+     * once the doctor and iRegNum has been chosen
      * fee will be show and fee will be accessible
      * */
     private void updateRes(){

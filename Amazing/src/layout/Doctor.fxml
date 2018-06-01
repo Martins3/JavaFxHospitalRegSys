@@ -38,17 +38,17 @@
                 <center>
                     <TableView fx:id="incomeTable" GridPane.columnIndex="0" GridPane.rowIndex="1">
                         <columns>
-                            <TableColumn text="科室名称">
+                            <TableColumn text="科室名称" fx:id="iDepartmentName">
                             </TableColumn>
-                            <TableColumn text="医生编号">
+                            <TableColumn text="医生编号" fx:id="iDoctorNum">
                             </TableColumn>
-                            <TableColumn text="医生名称">
+                            <TableColumn text="医生名称" fx:id="iDoctorName">
                             </TableColumn>
-                            <TableColumn text="号种类别">
+                            <TableColumn text="号种类别" fx:id="iRegType">
                             </TableColumn>
-                            <TableColumn text="挂号人次">
+                            <TableColumn text="挂号人次" fx:id="iPatientAmount">
                             </TableColumn>
-                            <TableColumn text="收入合计">
+                            <TableColumn text="收入合计" fx:id="iTotalIncome">
                             </TableColumn>
                         </columns>
                     </TableView>

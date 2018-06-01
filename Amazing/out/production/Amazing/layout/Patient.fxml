@@ -85,11 +85,10 @@
          </font>
       </Button>
 
-      <Button layoutX="250.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#clearAll" text="清除">
+      <Button layoutX="280.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#clearAll" text="清除">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-
    </AnchorPane>
 </SplitPane>

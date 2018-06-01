@@ -3,7 +3,7 @@ import java.util.Stack;
 
 public class Queue<E> extends Stack<E>{
     private  Stack<E> stk;
-    private final int capacity=5; //设置每个栈上限
+    private final int capacity = 100;
     public Queue(){
         stk = new Stack<>();
     }
@@ -14,12 +14,12 @@ public class Queue<E> extends Stack<E>{
         if(this.full())
             throw new IllegalStateException("Queue is full !");
 
-        if(super.size()==0){//当栈1为空时把栈2倒回栈1
+        if (super.size() == 0) {
             int size = stk.size();
             for (int i = 0; i < size; ++i) {
                 super.push(stk.pop());
             }
-        }else if (super.size()==capacity){//栈1满时，倒入栈2
+        } else if (super.size() == capacity) {
             int size=super.size();
             for (int i = 0; i < size; ++i) {
                 E t=super.remove(super.size()-1);
@@ -106,9 +106,5 @@ public class Queue<E> extends Stack<E>{
 
     public boolean empty(){
         return size()==0&&stk.size()==0;
-    }
-
-    public static void main(String[] args) {
-
     }
 }

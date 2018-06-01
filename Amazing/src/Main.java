@@ -36,7 +36,6 @@ public class Main extends Application {
             Parent p = patientScene.load();
             PatientController patientController = patientScene.getController();
             patientController.setUser(id);
-//            patientController.rendering();
             patientController.setMain(this);
 
             primaryStage.setTitle("挂号");
@@ -48,12 +47,14 @@ public class Main extends Application {
 
 
 
-    void setDoctor(){
+    void setDoctor(String id){
         FXMLLoader doctorScene = new FXMLLoader(getClass().getResource("layout/Doctor.fxml"));
         try {
             Pane p = doctorScene.load();
             doctorController = doctorScene.getController();
+            doctorController.setUser(id);
             doctorController.setMain(this);
+            doctorController.initTable();
             primaryStage.setTitle("医生界面");
             primaryStage.setScene(new Scene(p));
         } catch (IOException e) {
