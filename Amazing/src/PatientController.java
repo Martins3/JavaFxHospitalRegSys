@@ -14,7 +14,9 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 
 /**
@@ -56,6 +58,10 @@ public class PatientController {
         Platform.runLater(() -> exchangeCount.setText("" + getDeposit()));
     }
 
+    public void clearAll(MouseEvent mouseEvent) {
+        clear();
+    }
+
     enum Confirm{
         /**
          * every confirm will shorten other choose
@@ -86,19 +92,6 @@ public class PatientController {
     }
 
     private void initSelectListener(){
-        /*
-        doctorName.getEditor().focusedProperty().addListener((arg0, oldPropertyValue, newPropertyValue) -> {
-        if (newPropertyValue) { confirm = Confirm.DOCTOR; }
-        });
-
-        regType.getEditor().focusedProperty().addListener((arg0, oldPropertyValue, newPropertyValue) -> {
-        if (newPropertyValue) { confirm = Confirm.REG_TYPE; }
-        });
-
-        departmentName.getEditor().focusedProperty().addListener((arg0, oldPropertyValue, newPropertyValue) -> {
-        if (newPropertyValue) { confirm = Confirm.DEPARTMENT; }
-        });
-        */
 
         departmentName.getSelectionModel().selectedItemProperty().addListener((observableValue, number, t1) -> {
             if(!checkValid(t1, Confirm.DEPARTMENT))
@@ -109,14 +102,12 @@ public class PatientController {
         regType.getSelectionModel().selectedItemProperty().addListener((observableValue, number, t1) -> {
             if(!checkValid(t1, Confirm.REG_TYPE))
                 regTypeID = null;
-            System.out.println("reg type id is" + regTypeID);
             updateRes();
         });
 
         doctorName.getSelectionModel().selectedItemProperty().addListener((observableValue, number, t1) -> {
             if(!checkValid(t1, Confirm.DOCTOR))
                 doctorID = null;
-            System.out.println("doctor id is " + doctorID);
             updateRes();
         });
 
@@ -144,7 +135,6 @@ public class PatientController {
 
         payment.setOnKeyPressed(ke -> {
             if(ke.getCode().equals(KeyCode.ENTER)){
-                System.out.println("press enter !");
                 try {
                     int pay = Integer.parseInt(payment.getText());
                     int deposit = getDeposit();
@@ -152,13 +142,16 @@ public class PatientController {
                     int cost = Integer.valueOf(fee.getText());
                     if(pay + deposit < cost){
                         payment.clear();
+                        exchangeCount.setVisible(false);
                         System.out.println("pay is not enough " + pay  + " " + deposit);
                     }else{
                         deposit = pay + deposit  - cost;
+                        exchangeCount.setVisible(true);
                         exchangeCount.setText("" + deposit);
                         System.out.println("after " + getDeposit());
                     }
                 }catch (NumberFormatException n){
+                    exchangeCount.setVisible(false);
                     payment.clear();
                 }
             }
@@ -175,6 +168,7 @@ public class PatientController {
         session.beginTransaction();
         ePatientEntity e = getPatient();
         e.setMoney(new BigDecimal(d));
+        session.update(e);
         session.getTransaction().commit();
     }
 
@@ -197,6 +191,7 @@ public class PatientController {
             fee.setText(info);
             payment.clear();
             payment.setVisible(false);
+            exchangeCount.setVisible(false);
             return;
         }
 
@@ -229,8 +224,7 @@ public class PatientController {
         }
 
         String id = text.substring(0, 6);
-        System.out.println("the text is " + text);
-        System.out.println("the id we get " + id);
+        System.out.println(text);
 
         // query the table to make sure it exits
         Session session = DBMain.getSession();
@@ -259,30 +253,102 @@ public class PatientController {
         return query.list().size() == 1;
     }
 
+    private String getRegNum(){
+        String hql = "select count(*) from eRegistrationInstanceEntity";
+        Query query = DBMain.getSession().createQuery(hql);
+        List<Long> results = query.list();
+        String num = "" + (results.get(0) + 1);
+        if(6 - num.length()  <= 0) return null;
+        char[] chars = new char[6 - num.length()];
+        Arrays.fill(chars, '0');
+        String s = new String(chars);
+        num = s + num;
+        System.out.println("reg num : " +  num);
+        return num;
+    }
+
+    /**
+     * @return 返回当前注册号码的人数
+     */
+    private int getRegPatientNum(){
+        if(regTypeID ==  null){
+            System.out.println("logical exception !");
+            assert(false);
+        }
+
+        String hql = "from eRegistrationInstanceEntity where :num = num";
+        Query query = DBMain.getSession().createQuery(hql);
+        query.setParameter("num", regTypeID);
+        List<eRegistrationInstanceEntity> results = query.list();
+        int patientNum = 0;
+        for(eRegistrationInstanceEntity e : results){
+            patientNum = Math.max(patientNum, e.getPatientAmount());
+        }
+        return patientNum;
+    }
+
+
+    private int getNamLimitation(){
+        if(regTypeID ==  null){
+            System.out.println("logical exception !");
+            assert(false);
+        }
+        String hql = "from eRegistrationTypeEntity where :num = num";
+        Query query = DBMain.getSession().createQuery(hql);
+        query.setParameter("num", regTypeID);
+        List<eRegistrationTypeEntity> l = query.list();
+        eRegistrationTypeEntity e = l.get(0);
+        return e.getNumLimitaion();
+    }
+
 
     public void submit(MouseEvent mouseEvent) {
-        // save changes
-        setDeposit(Integer.valueOf(exchangeCount.getText()));
+        if(doctorID == null || regTypeID == null) return;
 
-        // create a reg
+        // save changes
+        if(exchangeCount.isVisible())
+            setDeposit(Integer.valueOf(exchangeCount.getText()));
+
         Session session = DBMain.getSession();
         session.beginTransaction();
         eRegistrationInstanceEntity e = new eRegistrationInstanceEntity();
-        e.setNum("000001"); // how to make the data sync
-        e.setRegNum("000003"); // add a variable
-        e.setDoctorNum("000004"); // add a variable
-        e.setPatientNum(user);
-        e.setPatientAmount(12); // 如何确定人数
 
+        String num = getRegNum();
+        if(num == null) return;
+
+        int patientAmount = getRegPatientNum();
+        int limitation = getNamLimitation();
+        if(patientAmount >= limitation){
+            regNum.setText("该号种已经用完");
+            return;
+        }
+
+        e.setNum(num);
+        e.setRegNum(regTypeID);
+        e.setDoctorNum(doctorID);
+        e.setPatientNum(user);
+        e.setPatientAmount(patientAmount + 1);
         e.setIsCancelled((byte)0);
-        e.setActualCost(new BigDecimal(123));
+        e.setActualCost(new BigDecimal(new Random().nextInt(10) + 10));
         e.setTime(Timestamp.valueOf(LocalDateTime.now()));
         session.save(e);
         session.getTransaction().commit();
+        clear();
     }
 
+    private void clear(){
+        regType.getEditor().clear();
+        updateTwoCombo();
+        doctorName.getEditor().clear();
+        regType.getEditor().clear();
+        departmentName.getEditor().clear();
+        isExpert.getSelectionModel().select(0);
+    }
+
+
+
     public void exit(MouseEvent mouseEvent) {
-        main.stop();
+        main.setMain();
     }
 
 
@@ -290,17 +356,11 @@ public class PatientController {
         return abbr.contains(input);
     }
 
-    /**
-     * when update isExpert and department
-     */
     private void updateTwoCombo(){
         updateCombo(regType, regType.getEditor().getText());
         updateCombo(doctorName, doctorName.getEditor().getText());
     }
 
-    /**
-     * when init
-     */
     private void updateThreeCombo(){
         updateCombo(regType, "");
         updateCombo(doctorName, "");

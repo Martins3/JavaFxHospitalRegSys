@@ -3,13 +3,16 @@ import com.hibernate.data.eRegistrationInstanceEntity;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -22,18 +25,26 @@ public class DoctorController {
     public TableView incomeTable;
     public DatePicker startDataPicker;
     public DatePicker endDataPicker;
-    public TableColumn pRegNum;
+    public TableColumn<PatRow, String> pRegNum;
     public TableColumn pPatNum;
     public TableColumn pDate;
     public TableColumn pExpert;
+    public Tab pTab;
 
     // update thread !
     private Timeline timeline;
+    private Main main;
 
-    private final ObservableList<PatRow> patData =
-            FXCollections.observableArrayList(
-                    new PatRow("E")
-            );
+    private ObservableList<PatRow> patData = FXCollections.observableArrayList();
+
+    public void setMain(Main main) {
+        this.main = main;
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        main.setMain();
+    }
+
 
     class PatRow{
         private SimpleStringProperty regNum;
@@ -41,23 +52,23 @@ public class DoctorController {
 //        private   SimpleStringProperty date;
 //        private   SimpleStringProperty expert;
 
-        public PatRow(String regNum) {
+        PatRow(String regNum) {
             this.regNum = new SimpleStringProperty(regNum);
         }
 
-        public void setRegNum(String regNum) {
-            this.regNum.set(regNum);
-        }
 
-        public String getRegNum() {
-            return regNum.get();
+
+        StringProperty getRegNum() {
+            return regNum;
         }
     }
 
 
     @FXML
     public void initialize(){
-        pRegNum.setCellValueFactory(new PropertyValueFactory<PatRow, String>("regNum"));
+        pRegNum.setCellValueFactory(cellData -> cellData.getValue().getRegNum());
+        patientsTable.getItems().add(new PatRow("ggggggg"));
+
 //        patientsTable.setItems(patData);
 //        pPatNum.setCellValueFactory(new PropertyValueFactory<PatRow, String>("patNum"));
 //        pDate.setCellValueFactory(new PropertyValueFactory<PatRow, String>("date"));

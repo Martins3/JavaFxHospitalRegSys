@@ -1,38 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.chart.StackedBarChart?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="DoctorController"
           prefHeight="400.0" prefWidth="600.0">
 
     <TabPane id="tabPane" prefHeight="400.0" prefWidth="600.0">
-        <Tab text="病人列表" closable="false">
+        <Tab text="病人列表" fx:id="pTab" closable="false">
                 <TableView  fx:id="patientsTable" GridPane.columnIndex="0" GridPane.rowIndex="2">
                     <columns>
                         <TableColumn fx:id="pRegNum" text="挂号编号">
                         </TableColumn>
-                        <!--<TableColumn fx:id="pPatNum" text="病人编号">-->
-                        <!--</TableColumn>-->
-                        <!--<TableColumn fx:id="pDate" text="挂号日期时间">-->
-                        <!--</TableColumn>-->
-                        <!--<TableColumn fx:id="pExpert" text="号种类别">-->
-                        <!--</TableColumn>-->
+                        <TableColumn fx:id="pPatNum" text="病人编号">
+                        </TableColumn>
+                        <TableColumn fx:id="pDate" text="挂号日期时间">
+                        </TableColumn>
+                        <TableColumn fx:id="pExpert" text="号种类别">
+                        </TableColumn>
                     </columns>
                 </TableView>
         </Tab>
-
-
-
 
         <Tab text="收入列表" closable="false">
             <BorderPane>
@@ -64,9 +53,11 @@
                         </columns>
                     </TableView>
                 </center>
-
             </BorderPane>
+        </Tab>
 
+        <Tab text="退出系统" closable="false">
+            <Button text="退出" onMouseClicked="#exit"/>
         </Tab>
     </TabPane>
 

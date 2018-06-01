@@ -45,7 +45,7 @@
       </Label>
       <TextField fx:id="payment" layoutX="129.0" layoutY="124.0" promptText="交款金额" />
 
-      <Label fx:id="exchangeCount" layoutX="129.0" layoutY="165.0" text="fuck" />
+      <Label fx:id="exchangeCount" layoutX="129.0" layoutY="165.0" />
       <Label layoutX="64.0" layoutY="169.0" text="剩余金额">
          <font>
             <Font name="Arial Bold" size="15.0" />
@@ -78,10 +78,18 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
+
       <Button layoutX="365.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#exit" text="退出">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
+
+      <Button layoutX="250.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#clearAll" text="清除">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+
    </AnchorPane>
 </SplitPane>

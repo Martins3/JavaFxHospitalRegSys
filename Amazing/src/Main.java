@@ -18,16 +18,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         this.primaryStage = primaryStage;
-
-        FXMLLoader root = new FXMLLoader(getClass().getResource("layout/Login.fxml"));
-        Pane pane = root.load();
-        Login rootController = root.getController();
-
-        rootController.setMain(this);
-
-        primaryStage.setTitle("登录界面");
-        primaryStage.setScene(new Scene(pane));
-
+        setMain();
         primaryStage.show();
     }
 
@@ -45,7 +36,7 @@ public class Main extends Application {
             Parent p = patientScene.load();
             PatientController patientController = patientScene.getController();
             patientController.setUser(id);
-            patientController.rendering();
+//            patientController.rendering();
             patientController.setMain(this);
 
             primaryStage.setTitle("挂号");
@@ -60,8 +51,9 @@ public class Main extends Application {
     void setDoctor(){
         FXMLLoader doctorScene = new FXMLLoader(getClass().getResource("layout/Doctor.fxml"));
         try {
-            doctorController = doctorScene.getController();
             Pane p = doctorScene.load();
+            doctorController = doctorScene.getController();
+            doctorController.setMain(this);
             primaryStage.setTitle("医生界面");
             primaryStage.setScene(new Scene(p));
         } catch (IOException e) {
@@ -78,8 +70,21 @@ public class Main extends Application {
         return userID;
     }
 
-    public void setUserID(String userID) {
+    void setUserID(String userID) {
         this.userID = userID;
+    }
+
+    void setMain() {
+        FXMLLoader root = new FXMLLoader(getClass().getResource("layout/Login.fxml"));
+        try {
+            Pane pane = root.load();
+            Login rootController = root.getController();
+            rootController.setMain(this);
+            primaryStage.setTitle("登录界面");
+            primaryStage.setScene(new Scene(pane));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 
