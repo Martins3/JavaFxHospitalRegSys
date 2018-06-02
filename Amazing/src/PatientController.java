@@ -59,7 +59,7 @@ public class PatientController {
     }
 
     public void clearAll(MouseEvent mouseEvent) {
-        clear();
+        clear("未确定");
     }
 
     enum Confirm{
@@ -186,6 +186,7 @@ public class PatientController {
      * fee will be show and fee will be accessible
      * */
     private void updateRes(){
+        regNum.setText("未确定");
         if(doctorID == null || regTypeID == null){
             final String info = "医生或号种没有确定";
             fee.setText(info);
@@ -271,18 +272,14 @@ public class PatientController {
      * @return 返回当前注册号码的人数
      */
     private int getRegPatientNum(){
-        if(regTypeID ==  null){
-            System.out.println("logical exception !");
-            assert(false);
-        }
-
-        String hql = "from eRegistrationInstanceEntity where :num = num";
+        String hql = "from eRegistrationInstanceEntity where regNum = :num";
         Query query = DBMain.getSession().createQuery(hql);
         query.setParameter("num", regTypeID);
         List<eRegistrationInstanceEntity> results = query.list();
         int patientNum = 0;
         for(eRegistrationInstanceEntity e : results){
             patientNum = Math.max(patientNum, e.getPatientAmount());
+            System.out.println(patientNum);
         }
         return patientNum;
     }
@@ -306,8 +303,17 @@ public class PatientController {
         if(doctorID == null || regTypeID == null) return;
 
         // save changes
-        if(exchangeCount.isVisible())
+        if(exchangeCount.isVisible()){
             setDeposit(Integer.valueOf(exchangeCount.getText()));
+        }else{
+            int a = getDeposit() - Integer.valueOf(fee.getText());
+            if(a < 0){
+                regNum.setText("余额不足");
+                return;
+            }
+            setDeposit(a);
+        }
+
 
         Session session = DBMain.getSession();
         session.beginTransaction();
@@ -333,19 +339,18 @@ public class PatientController {
         e.setTime(Timestamp.valueOf(LocalDateTime.now()));
         session.save(e);
         session.getTransaction().commit();
-        clear();
+        clear(num);
     }
 
-    private void clear(){
+    private void clear(String num){
         regType.getEditor().clear();
-        updateTwoCombo();
         doctorName.getEditor().clear();
         regType.getEditor().clear();
         departmentName.getEditor().clear();
         isExpert.getSelectionModel().select(0);
+        updateTwoCombo();
+        regNum.setText(num);
     }
-
-
 
     public void exit(MouseEvent mouseEvent) {
         main.setMain();
@@ -357,6 +362,7 @@ public class PatientController {
     }
 
     private void updateTwoCombo(){
+        regNum.setText("未确定");
         updateCombo(regType, regType.getEditor().getText());
         updateCombo(doctorName, doctorName.getEditor().getText());
     }
